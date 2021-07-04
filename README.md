@@ -5,7 +5,7 @@
 - https://luyencode.net/
 
 # Tìm kiếm:
-Ctrl F + Mã bài
+- Ctrl F + Mã bài
 
 # Lưu ý:
 - Hướng giải quyết của mình có thể chưa tối ưu, code chỉ dựa trên tính chất tham khảo
