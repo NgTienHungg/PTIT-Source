@@ -30,7 +30,7 @@ const int mod = 1e9 + 7;
 ll Mul(ll a, ll b)
 {
     if (b == 0)
-        return 0ll;
+        return 0;
     if (b == 1)
         return a;
     ll tmp = Mul(a, b / 2);
