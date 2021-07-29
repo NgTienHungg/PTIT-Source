@@ -2,44 +2,40 @@
 // P202PROE - Dãy ngoặc đúng dài nhất
 
 #include <bits/stdc++.h>
-
+#define endl '\n'
 using namespace std;
 
-void solve()
+void TestCase()
 {
     string s;
     cin >> s;
-    stack<char> st;
-    int count = 0;
-    int len = 0;
-    for (int i = 0; i < s.length(); i++)
+    int res = 0;
+    stack<int> st;
+    st.push(-1);
+    for (int i = 0; i < s.length(); ++i)
     {
         if (s[i] == '(')
-            st.push(s[i]);
+            st.push(i);
         else
         {
+            st.pop();
             if (!st.empty())
-            {
-                count++;
-                st.pop();
-            }
+                res = max(res, i - st.top());
             else
-            {
-                len = max(len, count);
-                count = 0;
-            }
+                st.push(i);
         }
     }
-    if (len == 0)
-        len = count;
-    cout << 2 * len << endl;
+    cout << res << endl;
 }
 
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
-        solve();
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+
+    int T;
+    cin >> T;
+    while (T--)
+        TestCase();
     return 0;
 }
