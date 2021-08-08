@@ -71,19 +71,18 @@ int main() {
 - Bài này sẽ luyện cho bạn các thao tác cài đặt cấu trúc dữ liệu ngăn xếp (stack). Nếu đã cài đặt thành công, hãy tìm hiểu cách sử dụng container stack trong STL và cài đặt nó.
 
 ```C++
-#include <stdio.h>
-#include <string.h>
+#include <bits/stdc++.h>
+using namespace std;
 
-long long st[1001];
-int Top = 0;
+int st[1000], Top;
 
 void init() {
     Top = 0;
 }
 
-void push(long long num) {
+void push(int x) {
     Top++;
-    st[Top] = num;
+    st[Top] = x;
 }
 
 void pop() {
@@ -105,20 +104,20 @@ void empty() {
 }
 
 int main() {
-    char s[1001];
     while (1) {
-        scanf("%s", s);
-        if (strcmp(s, "end") == 0) break;
-        else if (strcmp(s, "init") == 0) init();
-        else if (strcmp(s, "push") == 0) {
-            long long num;
-            scanf("%lld", &num);
-            push(num);
+        string s;
+        cin >> s;
+        if (s == "end") break;
+        else if (s == "init") init();
+        else if (s == "push") {
+            int x;
+            cin >> x;
+            push(x);
         }
-        else if (strcmp(s, "pop") == 0) pop();
-        else if (strcmp(s, "top") == 0) top();
-        else if (strcmp(s, "size") == 0) size();
-        else if (strcmp(s, "empty") == 0) empty();
+        else if (s == "pop") pop();
+        else if (s == "top") top();
+        else if (s == "size") size();
+        else if (s == "empty") empty();
     }
     return 0;
 }
