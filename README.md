@@ -1,6 +1,13 @@
 #
 
-## Web luyện tập
+## Learning
+
+- [Lập trình không khó](https://nguyenvanhieu.vn/)
+- [CodeLearn](https://codelearn.io/)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/)
+- [Cplusplus](http://www.cplusplus.com/)
+
+## Practice
 
 - [SPOJ PTIT](https://www.spoj.com/PTIT/status/)
 - [IT PTIT](https://code.itptit.com/problems)
@@ -10,7 +17,7 @@
 
 ## Note
 
-- Tìm kiếm Code: `Ctrl F` + `Mã bài`
-- Tài liệu tham khảo: [Document C++](https://drive.google.com/drive/folders/1HmSUWBoxB9nhNXb5Be7WTZRsowSs82hO?usp=sharing)
-- Hướng giải quyết của mình có thể chưa tối ưu, code chỉ dựa trên tính chất tham khảo!
+- Tìm kiếm code: `Ctrl F` + `Mã bài`
+- Tài liệu code: [Document C++](https://drive.google.com/drive/folders/1HmSUWBoxB9nhNXb5Be7WTZRsowSs82hO?usp=sharing)
+- Hướng giải quyết có thể chưa tối ưu, code chỉ mang tính chất tham khảo!
 - Cảm ơn vì đã quan tâm!
