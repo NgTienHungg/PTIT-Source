@@ -45,8 +45,4 @@ int main() {
         TestCase();
     }
     return 0;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 7649b37621d13d879ad73299630b5d90caf0f1f1
