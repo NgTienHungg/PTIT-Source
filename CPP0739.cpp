@@ -1,30 +1,9 @@
-// https://www.spoj.com/PTIT/problems/CPPREA10/
-// CPPREA10 - Re-arrang Array 10
+// https://code.ptit.edu.vn/student/question/CPP0739
+// GIẢI MÃ TĂNG GIẢM
 
 #include <bits/stdc++.h>
 using namespace std;
 
-<<<<<<< HEAD
-void solve()
-{
-    string s;
-    cin >> s;
-    stack<int> st;
-    string res = "";
-    for (int i = 0; i <= s.length(); i++)
-    {
-        st.push(i + 1);
-        if (i == s.length() || s[i] == 'I')
-        {
-            while (!st.empty())
-            {
-                res = res + char(st.top() + '0');
-                st.pop();
-            }
-        }
-    }
-    cout << res << endl;
-=======
 void TestCase()
 {
     string s;
@@ -60,20 +39,14 @@ void TestCase()
     }
     for (auto x : v) cout << x;
     cout << endl;
->>>>>>> 7649b37621d13d879ad73299630b5d90caf0f1f1
 }
 
 int main()
 {
     int T;
     cin >> T;
-<<<<<<< HEAD
-    while (T--)
-        solve();
-=======
     while (T--) {
         TestCase();
     }
->>>>>>> 7649b37621d13d879ad73299630b5d90caf0f1f1
     return 0;
 }
