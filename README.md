@@ -1,6 +1,8 @@
-# Hello World :P
+# Hello World
 
----
+- Trong này có một ít code mình làm từ các trang như `Code PTIT`, `SPOJ PTIT`, `IT PTIT` và `Luyen Code`.
+- Hướng giải quyết có thể chưa tối ưu, code chỉ mang tính chất tham khảo!
+- Cảm ơn vì đã quan tâm, rảnh thì để lại 1 sao cho mình nhá!
 
 ## Learning
 
@@ -15,6 +17,7 @@ Một vài blog chia sẻ kiến thức mình thấy hay:
 
 - [CodeLearn](https://codelearn.io/)
 - [CppDeveloper](https://cppdeveloper.com/)
+- [Dạy nhau học](https://cpp.daynhauhoc.com/)
 - [Lập trình không khó](https://nguyenvanhieu.vn/)
 
 ## Practice
@@ -29,5 +32,3 @@ Một vài blog chia sẻ kiến thức mình thấy hay:
 
 - Tìm kiếm code: `Ctrl F` + `Mã bài`
 - Tài liệu code: [Document C++](https://drive.google.com/drive/folders/1HmSUWBoxB9nhNXb5Be7WTZRsowSs82hO?usp=sharing)
-- Hướng giải quyết có thể chưa tối ưu, code chỉ mang tính chất tham khảo!
-- Cảm ơn vì đã quan tâm, rảnh thì để lại 1 sao cho mình nhá :D!
