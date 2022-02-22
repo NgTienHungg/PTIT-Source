@@ -1,0 +1,36 @@
+SỐ LỚN NHẤT BẬC K
+
+Cho hai số nguyên N và K, trong đó N không quá 10^7, K không quá 10. 
+Số lớn nhất bậc K của N được định nghĩa là giá trị lớn nhất có thể sau khi thực hiện nhiều nhất K lần các chữ số của N.
+Ví dụ K =3 và N = “1234567” ta số lớn nhất bậc K của N là “7654321”.
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T.
+Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số K; dòng tiếp theo là xâu ký tự S.
+T, K, S thỏa mãn ràng buộc: 1≤T≤100; 0≤K≤10; 1≤lengh(S)≤7.
+
+Output:
+Đưa ra số lớn nhất bậc K của N trên một dòng.
+
+
+Ví dụ:
+
+Input
+3
+4
+1234567
+3
+3435335
+2
+1034
+
+Output
+7654321
+5543333
+4301
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------

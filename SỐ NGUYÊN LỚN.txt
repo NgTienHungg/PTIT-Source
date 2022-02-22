@@ -1,0 +1,34 @@
+SỐ NGUYÊN LỚN
+
+Cho hai số nguyên lớn N và M có không quá 1000 chữ số.
+Người ta muốn tính xem liệu có thể lấy ra nhiều nhất bao nhiêu chữ số trong N, không cần liên tiếp nhau nhưng phải giữ nguyên thứ tự ban đầu để tạo ra một số X sao cho ta cũng có thể tìm thấy X trong số M theo cách tương tự.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+Mỗi test gồm hai dòng, dòng thứ nhất ghi số N, dòng thứ 2 ghi số M.
+
+Output:
+Với mỗi test, hãy in ra số chữ số nhiều nhất có thể của X.
+
+Ví dụ:
+
+Input
+2
+144615
+4976135
+44
+88
+
+Output
+4
+0
+
+Giải thích test 1: số X tìm được là 4615.
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Quy hoạch động (Xâu con chung dài nhất)

@@ -1,0 +1,33 @@
+SỐ THUẬN NGHỊCH
+
+Cho số nguyên dương N có không quá 1000 chữ số.
+Hãy tính độ dài lớn nhất của một số thuận nghịch tạo được bằng cách lấy liên tiếp các chữ số trong N.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+Mỗi test ghi ra một số nguyên dương N không quá 1000 chữ số.
+
+Output:
+Với mỗi test, in ra đáp án tìm được.
+
+
+Ví dụ:
+
+Input
+2
+13731456
+44444
+
+Output
+5
+5
+
+Giải thích ví dụ:
+Test 1: số thuận nghịch dài nhất tìm được là 13731
+Test 2: số thuận nghịch dài nhất tìm được là 44444
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,34 @@
+TỔNG GẦN NHẤT
+
+Cho dãy số A[] có N số nguyên dương và số M.
+Hãy chọn ra 3 số trong dãy A[] sao cho tổng 3 số đó nhỏ hơn M nhưng gần với M nhất.
+In ra tổng 3 số tìm được.
+
+Input
+Dòng đầu ghi số bộ test (không quá 10)
+Mối test có hai dòng. Dòng đầu ghi 2 số N và M (1 ≤ N ≤ 100; 10 ≤ M ≤ 300000).
+Dòng thứ 2 ghi N số của dãy số A[]. Các số đều nguyên dương và không quá 6 chữ số.
+Input đảm bảo luôn có ít nhất một bộ ba số có tổng nhỏ hơn M.
+
+Output
+Mỗi test ghi giá trị tổng của 3 số tìm được trên một dòng.
+
+
+Ví dụ
+
+Input
+2
+5 21
+5 6 7 8 9
+10 500
+93 181 245 214 315 36 185 138 216 295
+
+Output
+21
+497
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------

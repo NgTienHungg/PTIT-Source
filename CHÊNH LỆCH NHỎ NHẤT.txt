@@ -1,0 +1,41 @@
+CHÊNH LỆCH NHỎ NHẤT
+
+Cho dãy A[] có N số nguyên, mỗi số có đúng K chữ số (có thể có chữ số 0 ở đầu).
+Gọi độ chênh lệch của dãy là hiệu giữa phần tử lớn nhất và bé nhất của dãy.
+Bạn có thể hoán vị các chữ số của một số để tạo số mới (có thể có chữ số 0 ở đầu).
+Bằng cách hoán vị tất cả n số theo cùng một cách, ta nhận được dãy số mới.
+Tìm độ chênh lệch nhỏ nhất có thể tạo được.
+
+Input:
+Dòng đầu chứa 2 số N và K. (1 ≤ N, K ≤ 8)
+N dòng sau, mỗi dòng chứa 1 số nguyên có K chữ số.
+
+Output:
+Độ chênh lệch nhỏ nhất tìm được.
+
+
+Ví dụ:
+
+Input
+3 3
+010
+909
+012
+
+Output
+3
+
+Giải thích test ví dụ:
+Đổi chỗ chữ số thứ 1 và 2 có thể nhận được dãy 100, 99, 102.
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Backtrack
+
+Sinh hoán vị qua mảng a[] và mảng vs[] để đánh dấu
+Với mỗi hoán vị, ta đổi chỗ toàn bộ ký tự của các xâu trong v theo quy luật của a[]
+Sau đó sort lại ds các xâu đó, tính max - min rồi so sánh với kết quả

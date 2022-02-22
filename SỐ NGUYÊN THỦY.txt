@@ -1,0 +1,33 @@
+SỐ NGUYÊN THỦY
+
+Cho số nguyên N. Nhiệm vụ của bạn hãy đưa ra N số nguyên thủy đầu tiên theo thứ tự từ nhỏ đến lớn.
+Số K được gọi là số nguyên thủy nếu số đó thỏa mãn tất cả các điều kiện:
+Số các chữ số của K là một số chẵn.
+Tất cả các chữ số của K chỉ bao gồm số 4 hoặc 5.
+K là một số đối xứng.
+
+Input:
+Dòng đầu tiên đưa vào số lượng test T.
+Dòng tiếp theo đưa vào các bộ test. Mỗi bộ test được là một số N được viết trên một dòng.
+T, N thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10^4.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+
+Ví dụ:
+
+Input
+2
+4
+10
+
+Output
+44 55 4444 4554
+44 55 4444 4554 5445 5555 444444 445544 454454 455554
+
+
+Time limit: 2s
+Memory limit: 150000 Kb
+
+--------------------------------------------------------------------------------------------------------------

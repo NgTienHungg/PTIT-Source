@@ -1,0 +1,44 @@
+DÃY CON LIÊN TIẾP CÓ TỔNG BẰNG K
+
+Cho dãy số A[] gồm có N phần tử không âm và số K.
+Nhiệm vụ của bạn là hãy xác định xem có tìm được 1 dãy con liên tiếp mà tổng các phần tử bằng K hay không?
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+Mỗi test gồm số nguyên N và K (1≤ N ≤ 100 000, 0 ≤ K ≤ 10^18).
+Dòng tiếp theo gồm N số nguyên A[i] (0 ≤ A[i] ≤ 10^9).
+
+Output:
+Với mỗi test, in ra trên một dòng là đáp án thu được.
+Nếu có hãy in ra “YES”. Nếu không tìm được đáp án, in ra “NO”.
+
+
+Ví dụ:
+
+Input:
+3
+6 33
+1 4 20 3 10 5
+7 7
+1 4 0 0 3 10 5
+2 0
+1 4
+
+Output
+YES
+YES
+NO
+
+Giải thích test 1: 20+3+10 = 33
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Binary Search
+
+Sử dụng mảng a, vừa nhập vào vừa cộng dồn
+Tại mỗi vị trí i, tổng 1 dãy con liên tiếp bắt đầu từ i, kết thúc tại j sẽ là a[j] - a[i - 1] = x
+Vậy muốn kiểm tra xem có tồn tại a[j] không, mình đi tìm kiếm a[i - 1] + x.

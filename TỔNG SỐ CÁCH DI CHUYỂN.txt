@@ -1,0 +1,36 @@
+TỔNG SỐ CÁCH DI CHUYỂN
+
+Khu vui chơi trẻ em thiết kế một cầu thang có N bậc để di chuyển lên đỉnh tháp.
+Sinh viên PTIT cũng được phép leo lên cầu thang này nhưng nhìn chung chân sinh viên PTIT khá là dài nên có thể đi từ 1 đến K bậc mỗi bước (chứ không chỉ là 1 bậc như trẻ em).
+Hãy tính xem sinh viên PTIT có bao nhiêu cách để leo lên đến đỉnh.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 100).
+Mỗi test gồm hai số nguyên dương N và K (1 ≤ N ≤ 100000, 1 ≤ K ≤ 100).
+
+Output: 
+Với mỗi test, in ra đáp án tìm được trên một dòng theo modulo 10^9+7.
+
+
+Ví dụ:
+Input
+2
+2 2
+4 2
+
+Output
+2
+5
+
+Giải thích test 2: Có 5 cách lần lượt là: (1, 1, 1, 1), (1, 1, 2), (1, 2, 1), (2, 1, 1), (2, 2).
+
+
+Time limit: 1s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Bài toán quy hoạch động Bậc thang
+
+Từ bậc 1 đến bậc k, số cách bước tại bậc i sẽ bằng tổng số cách bước các bậc trước đó + 1 (1 cách bước bậc hiện tại)
+Từ bậc k + 1 đến bậc N, số cách bước bậc i sẽ bằng tổng số cách bước k bậc trước nó.

@@ -1,0 +1,46 @@
+LỰA CHỌN TỐI ƯU
+
+Bạn được giao cho N công việc, công việc thứ i có thời gian bắt đầu là A[i] và kết thúc tại B[i].
+Tại một thời điểm, bạn chỉ có thể làm một công việc.
+Bạn hãy lựa chọn các công việc một cách tối ưu sao cho số công việc làm được là nhiều nhất.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 10).
+Mỗi test gồm 1 số nguyên N ( 1 ≤ N ≤ 100 000).
+N dòng tiếp theo, mỗi dòng gồm 2 số A[i] và B[i] (0 ≤ A[i] < B[i] ≤ 106).
+
+Output:
+Với mỗi test, in ra đáp án trên một dòng.
+
+
+Ví dụ:
+
+Input
+1
+6
+5 9
+1 2
+3 4
+0 6
+5 7
+8 9
+ 
+Output
+4
+
+Giải thích test: Lựa chọn công việc 2, 3, 5, 6.
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Tham lam
+
+Sắp xếp lại toàn bộ công việc theo thứ tự ưu tiên công việc kết thúc trước.
+Nếu 2 công việc kết thúc cùng thời gian thì ưu tiên công việc bắt đầu muộn hơn.
+Bây giờ coi như luôn luôn làm được công việc đầu tiên, thời gian hiện tại là thời gian kết thúc công việc 1.
+Duyệt toàn bộ công việc còn lại, nếu thời gian bắt đầu công việc i >= thời gian hiện tại, tức là thực hiện được công việc i,
+thì tăng biến đếm kết quả lên 1, đồng thời gán thời gian hiện tại là thời điểm kết thúc công việc i.
+Ngược lại công việc i, không thực hiện được, thời gian hiện tại cũng không thay đổi.

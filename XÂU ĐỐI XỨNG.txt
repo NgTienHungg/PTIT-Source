@@ -1,0 +1,54 @@
+XÂU ĐỐI XỨNG
+
+Cho xâu ký tự S. Nhiệm vụ của bạn là tìm số phép chèn tối thiểu các ký tự vào S để S trở thành xâu đối xứng.
+Ví dụ: S = “ab” ta có số phép chèn tối thiểu là 1 để trở thành xâu đối xứng “aba” hoặc “bab”.
+Với xâu S = “aa” thì số phép chèn tối thiểu là 0.
+Với xâu S = “abcd” có số phép chèn tối thiểu là 3 để trở thành xâu “dcbabcd”
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T.
+Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test là một xâu ký tự được viết trên một dòng
+T, str thỏa mãn ràng buộc: 1≤T≤100;  1≤length(str)≤40.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+
+Ví dụ:
+
+Input
+2
+abcd
+aba
+
+Output
+3
+0
+
+
+Input
+3
+abcd
+aba
+geeks
+
+Output
+3
+0
+3
+
+
+Time limit: 2s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Quy hoạch động
+
+Dựa trên bài toán Dãy con lặp lại dài nhất của 2 xâu
+Trong bài này thì 2 xâu chính là str và đảo của str (reverse)
+
+Ta sẽ đi tìm dãy kí tự lặp lại dài nhất của 2 xâu này (không cần liên tiếp), 
+đó chính là dãy đối xứng dài nhất, và coi như cố định dãy này
+
+Bây giờ chèn thêm các ký tự khác vào để được xâu đối xứng, vậy số ký tự cần chèn là str.length - độ dài dãy xâu kia vừa tìm được

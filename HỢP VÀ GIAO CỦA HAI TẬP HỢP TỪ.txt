@@ -1,0 +1,34 @@
+HỢP VÀ GIAO CỦA HAI TẬP HỢP TỪ
+
+Trong lập trình cơ bản, một từ được hiểu là một dãy ký tự liên tiếp không chứa khoảng trống, dấu tab hoặc dấu xuống dòng.
+Hãy xác định tập hợp các từ khác nhau trong một xâu ký tự, sau khi đã chuyển hết về dạng chữ thường.
+Sau đó nhập hai dòng ký tự và hiển thị hợp và giao của hai tập từ tương ứng.
+
+Input
+Chỉ có 2 dòng, mỗi dòng có độ dài không quá 1000 ký tự.
+
+Output
+Dòng 1 ghi hợp của 2 tập từ theo thứ tự từ điển
+Dòng 2 ghi giao của 2 tập từ theo thứ tự từ điển.
+
+
+Ví dụ
+
+Input
+Lap trinh huong doi tuong
+Ngon ngu lap trinh C++
+
+Output
+c++ doi huong lap ngon ngu trinh tuong
+lap trinh
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Map
+
+Đầu tiên dùng set lưu hết lại các từ khác nhau trong xâu a, xâu b
+Sau đó dùng map, đếm và đánh dấu lại các từ trong xâu trong 2 xâu, tất cả các từ trong map là từ hợp, còn từ nào có count == 2 thì là từ giao

@@ -1,0 +1,42 @@
+XÂU CON CHUNG DÀI NHẤT
+
+Cho 2 xâu S1 và S2. Hãy tìm xâu con chung dài nhất của 2 xâu này (các phần tử không nhất thiết phải liên tiếp nhau).
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+Mỗi test gồm hai dòng, mô tả xâu S1 và S2, mỗi xâu có độ dài không quá 1000 và chỉ gồm các chữ cái in hoa.
+
+Output:
+Với mỗi test, in ra độ dài dãy con chung dài nhất trên một dòng.
+
+
+Ví dụ:
+
+Input
+2
+AGGTAB
+GXTXAYB
+AA
+BB
+
+Output
+4
+0
+
+Giải thích test 1: Dãy con chung là G, T, A, B.
+
+
+Time limit: 2s
+Memory limit: 300000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Quy hoạch động
+
+Gọi f[i][j] là độ dài xâu con chung dài nhất của 2 xâu a(1, i) và b(1, j), tức là xâu a tính từ kí tự thứ 1 đến i, xâu b tính từ kí tự thứ 1 đến kí tự thứ j
+Bài toán cơ sở: f[0][j] = 0 với mọi j và f[i][0] = 0 với mọi i (Đã được khởi tạo bởi memset).
+
+Duyệt 2 for với 2 xâu, nhận thấy tại vị trí a[i] = b[j], thì f[i][j] = f[i - 1][j - 1] + 1,
+tức là thêm ký tự này vào cuối 2 xâu a(1, i - 1) và b(1, j - 1) thì xâu con chung tăng thêm 1 ký tự
+
+Ngược lại nếu 2 ký tự đang xét không bằng nhau, lấy f[i][j] bằng max của f[i - 1][j] và f[i][j - 1]

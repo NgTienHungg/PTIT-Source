@@ -1,0 +1,32 @@
+BIẾN ĐỔI TRUNG TỐ - HẬU TỐ
+
+Hãy viết chương trình chuyển đổi biểu thức biểu diễn dưới dạng trung tố về dạng hậu tố.
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T;
+Những dòng tiếp theo mỗi dòng đưa vào một bộ test.
+Mỗi bộ test là một biểu thức tiền tố exp.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+Ràng buộc:
+T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤10.
+
+
+Ví dụ:
+
+Input
+2
+(A+(B+C)
+((A*B)+C)
+
+Output
+ABC++
+AB*C+
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------

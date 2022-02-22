@@ -1,0 +1,46 @@
+TÍNH TỔNG GIÁ TRỊ ĐẶC BIỆT
+
+Cho một xâu s. Với mỗi một xâu con X liên tiếp của s có độ dài bằng K, giá trị đặc biệt của nó được tính bằng giá trị của X trong hệ cơ số B modulo M.
+Nhiệm vụ của bạn là tính tổng giá trị đặc biệt của tất cả các xâu con của s có độ dài bằng K.
+
+Input:
+Dòng đầu tiên gồm xâu S có độ dài không quá 300 000 gồm các kí tự từ 0 – 9.
+Dòng tiếp theo là số nguyên K, B và M (1 <= K <= |s|, 2 <= B <= 10, 1 <= M <= 1000).
+
+Output: 
+In ra đáp án tìm được.
+
+
+Test ví dụ:
+
+Test 1
+
+Input:
+12212
+3 3 5
+
+Output:
+5
+
+
+Test 2
+
+Input:
+111101
+4 2 15
+
+Output:
+27
+
+
+Giải thích test 1:
+Giá trị của xâu con 122 trong cơ số 3 bằng 17 % 5 = 2.
+Giá trị của xâu con 221 trong cơ số 3 bằng 25 % 5 = 0.
+Giá trị của xâu con 212 trong cơ số 3 bằng 23 % 5 = 3.
+Tổng của chúng bằng 5.
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------

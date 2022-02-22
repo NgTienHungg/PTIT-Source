@@ -1,0 +1,33 @@
+TÍNH TOÁN GIÁ TRỊ BIỂU THỨC TRUNG TỐ
+
+Cho biểu thức trung tố S với các toán tử +, -, *, / và dấu ngoặc (). Các toán hạng là các số có giá trị không vượt quá 100.
+Hãy tính giá trị biểu thức S. Phép chia thực hiện với số nguyên, input đảm bảo số bị chia luôn khác 0, đáp số biểu thức có không quá 10 chữ số.
+
+Input:
+Dòng đầu tiên là số lượng bộ test (T ≤ 100).
+Mỗi dòng gồm một xâu S, không quá 100 kí tự. Các toán hạng là các số nguyên không âm.
+
+Output: 
+Với mỗi test, in ra đáp án tìm được.
+
+
+Ví dụ:
+
+Input
+4
+6*3+2-(6-4/2)
+100+99*22
+6*((4*3)+5)
+1-2
+
+Output
+16
+2278
+102
+-1
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------

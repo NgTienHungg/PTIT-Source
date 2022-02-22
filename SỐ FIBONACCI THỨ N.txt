@@ -1,0 +1,34 @@
+SỐ FIBONACCI THỨ N
+
+Dãy số Fibonacci được xác định bằng công thức như sau:
+F[0] = 0, F[1] = 1;
+F[n] = F[n-1] + F[n-2] với mọi n >= 2.
+Các phần tử đầu tiên của dãy số là 0, 1, 1, 2, 3, 5, 8, ...
+Nhiệm vụ của bạn là hãy xác định số Fibonaci thứ n. Do đáp số có thể rất lớn, in ra kết quả theo modulo 109+7.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 1000).
+Mỗi test bắt gồm một số nguyên N (1 ≤ N ≤ 10^9).
+
+Output: 
+Với mỗi test, in ra đáp án trên một dòng.
+
+
+Ví dụ:
+
+Input:
+3
+2
+6
+20
+
+Output
+1
+8
+6765
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------

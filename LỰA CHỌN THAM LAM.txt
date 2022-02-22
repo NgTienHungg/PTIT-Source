@@ -1,0 +1,37 @@
+LỰA CHỌN THAM LAM
+
+Cho hai số nguyên dương N và S.
+Hãy lựa chọn các chữ số phù hợp để tạo ra số nhỏ nhất và số lớn nhất có N chữ số sao cho tổng chữ số đúng bằng S.
+
+Input
+Chỉ có một dòng ghi hai số N và S. (0 < N <= 100; 0 <= S <= 900)
+
+Output
+Ghi ra hai số nhỏ nhất và lớn nhất tìm được, cách nhau một khoảng trống.
+Nếu không thể tìm được thì ghi ra “-1 -1”
+
+Ví dụ
+
+Input
+3 20
+
+Output
+299 992
+
+
+Input
+2 900
+
+Output
+-1 -1
+
+
+Input
+3 0
+
+Output
+-1 -1
+
+
+Time limit: 1s
+Memory limit: 150000 Kb

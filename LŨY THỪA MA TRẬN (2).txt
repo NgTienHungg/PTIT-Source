@@ -1,0 +1,47 @@
+LŨY THỪA MA TRẬN
+
+Cho ma trận vuông A kích thước N x N. Nhiệm vụ của bạn là hãy tính ma trận X = AK với K là số nguyên cho trước.
+Sau đó, tính tổng các phần tử của cột cuối cùng. Đáp số có thể rất lớn, hãy in ra kết quả theo modulo 10^9+7.
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 100).
+Mỗi test bắt gồm một số nguyên N và K (1 ≤ N ≤ 10, 1 ≤ K ≤ 10^9) là kích thước của ma trận và số mũ.
+
+Output: 
+Với mỗi test, in ra kết quả của ma trận X.
+
+
+Ví dụ:
+
+Input
+2
+2 5
+1 1
+1 0
+3 1000000000
+1 2 3
+4 5 6
+7 8 9
+
+Output
+8
+581039956
+
+Giải thích:
+A^5 = 8 5
+      5 3
+Tổng các phần tử trên cột cuối cùng bằng 5+3 = 8.
+
+               597240088 35500972 473761863
+B^1000000000 = 781257150 154135232 527013321
+               965274212 272769492 580264779
+Tổng các phần tử trên cột cuối cùng là:
+(473761863+527013321+580264779) % 1000000007 = 581039956
+
+
+Time limit: 2s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Chia để trị

@@ -1,0 +1,37 @@
+NHỊP CHỨNG KHOÁN
+
+Bạn là một nhà đầu tư chứng khoán nổi tiếng.
+Nhiệm vụ hàng ngày của bạn là tính nhịp tăng giảm của phiên chứng khoán trong N ngày để có thể bắt kịp thị trường.
+Nhịp chứng khoán của ngày thứ i được định nghĩa là số ngày liên tiếp từ ngày thứ i trở về mà giá chứng khoán bé hơn hoặc bằng với giá chứng khoán của ngày i.
+
+Input:
+Dòng đầu ghi số bộ test (không quá 10). Mỗi test có 2 dòng.
+Dòng đầu tiên gồm 1 số nguyên N (1 ≤ N ≤ 10^5) là số ngày.
+Dòng tiếp theo gồm N số nguyên A1, A2, …, AN (1 ≤ Ai ≤ 106) là giá chứng khoán của các ngày.
+
+Output
+In ra N số B1, B2, …, BN trong đó Bi là nhịp chứng khoán của ngày thứ i.
+
+
+Ví dụ:
+
+Input
+1
+7
+100 80 60 70 60 75 85
+
+Output
+1 1 1 2 1 4 6
+
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Bài toán max min trên đoạn tịnh tiến
+
+Tại mỗi vị trí i, dùng stack lưu vị trí của số đầu tiên lớn hơn a[i] ở bên trái
+Nếu stack rỗng, nghĩa là tất cả các phần tử bên trái đều nhỏ hơn a[i], in ra i (tính từ 1)
+Nếu stack không rỗng, số phần tử liên tiếp nhỏ hơn bên trái a[i] là i - st.top 

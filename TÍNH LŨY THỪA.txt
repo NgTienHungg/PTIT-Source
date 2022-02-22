@@ -1,0 +1,35 @@
+TÍNH LŨY THỪA
+
+Cho hai số nguyên không âm a và b. Hãy tính a^b.
+Nếu kết quả quá lớn hãy chia dư cho 10^9 + 7.
+
+Input
+Gồm không quá 20 bộ test, mỗi test ghi trên một dòng hai số a,b; a không quá 9 chữ số, b không quá 18 chữ số.
+Input kết thúc khi a = b = 0
+
+Output
+Với mỗi test ghi ra kết quả tính được trên một dòng.
+
+
+Ví dụ
+Input
+2 3
+2 4
+3 2
+0 0
+
+Output
+8
+16
+9
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Chia để trị
+
+Chia đôi các số mũ, cho đến khi thành các bài toán có thể tính được là a^0 = 1 hoặc a^1 = a.
+Sau đó đệ quy, nếu số mũ lẻ thì nhân thêm kết quả với a (hệ số).

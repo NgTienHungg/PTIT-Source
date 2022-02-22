@@ -1,0 +1,37 @@
+KIỂM TRA BIỂU THỨC SỐ HỌC
+
+Cho biểu thức số học, hãy cho biết biểu thức số học có dư thừa các cặp ký hiệu ‘(’,’) ‘ hay không?
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T;
+Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một biểu thức.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+Ràng buộc:
+T, exp thỏa mãn ràng buộc: 1≤T≤100; 2≤length(exp)≤20.
+
+
+Ví dụ:
+
+Input
+3
+((a+b))
+(a + (b)/c)
+(a + b*(c-d))
+
+Output
+Yes
+Yes
+No
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Stack
+
+Cặp ngoặc thừa => cách nhau 2 đơn vị, hoặc cặp ngoặc ngay ngoài nó thừa.

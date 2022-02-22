@@ -1,0 +1,40 @@
+ĐẾM SỐ VẬT CẢN TRÊN MÊ CUNG
+
+Một mê cung được mô tả dưới dạng ma trận ký tự trong đó dấu ‘.’ là mô tả ô trống, không có vật cản, dấu ‘#’ mô tả một vật cản.
+Các vật cản sẽ ghép lại với nhau thành vật cản lớn hơn nếu nó liền kề theo hàng hoặc cột.
+Hãy đếm xem trong mê cung có bao nhiêu vật cản.
+
+Input
+Dong đầu ghi số hai số N, M là số hàng và số cột của mê cung.
+N dòng tiếp theo mô tả mê cung trong đó chỉ có các ký tự ‘.’ và ‘#’.
+
+Output
+Ghi ra số vật cản đếm được.
+
+
+Ví dụ
+
+Input
+5 6
+.#....
+
+..#...
+
+..#..#
+
+...##.
+
+.#....
+
+Output
+5
+
+
+Time limit: 2s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Loang (bfs)
+
+Duyệt lần lượt các ký tự a[i][j], nếu ký tự đó là '#', ta coi như một vật cản, tiến hành loang ra xung quang vật cản đó và gán các ký tự bằng '.'

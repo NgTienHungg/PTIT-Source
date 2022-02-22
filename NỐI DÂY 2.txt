@@ -1,0 +1,37 @@
+NỐI DÂY 2
+
+Cho N sợi dây với độ dài khác nhau được lưu trong mảng A[].
+Nhiệm vụ của bạn là nối N sợi dây thành một sợi sao cho tổng chi phí nối dây là nhỏ nhất.
+Biết chi phí nối sợi dây thứ i và sợi dây thứ j là tổng độ dài hai sợi dây A[i] và A[j].
+
+Input
+Dòng đầu ghi số bộ test T (T<10). Mỗi bộ test gồm 2 dòng. Dòng đầu tiên là số nguyên N (N ≤ 2*10^6).
+Dòng tiếp theo gồm N số nguyên dương c[i] ( 1 ≤ A[i] ≤ 10^9).
+
+Output
+In ra đáp án của bộ test trên từng dòng, theo modulo 10^9+7.
+
+
+Ví dụ:
+
+Input
+7
+2 4 1 2 10 2 3
+
+Output
+59
+
+
+Time limit: 1s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Tham lam + Hàng đợi ưu tiên
+
+Nhận thấy dù nối theo bất kỳ cách nào, ta cũng luôn mất n - 1 lần nối, và kết quả cuối cùng là đoạn dây dài bằng tổng n đoạn ban đầu.
+Mà mỗi lần nối, chi phí bằng tổng độ dài 2 đoạn được nối.
+Vậy mỗi lần nối sẽ lựa chọn 2 đoạn ngắn nhất để tốn ít chi phí nhất, và đoạn vừa nối được được coi như 1 đoạn mới.
+
+Sử dụng priority_queue với để có thể lấy ra 2 đoạn ngắn nhất mỗi lần nối, sau đó push lại đoạn mới vào queue.
+Tiếp tục cho đến khi queue.size = 1 thì dừng => Đã nối các đoạn thành 1 dây duy nhất.

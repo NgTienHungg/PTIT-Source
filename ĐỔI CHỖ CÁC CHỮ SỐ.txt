@@ -1,0 +1,31 @@
+ĐỔI CHỖ CÁC CHỮ SỐ
+
+Cho số tự nhiên K và xâu ký tự các chữ số S.
+Nhiệm vụ của bạn là đưa ra số lớn nhất bằng cách thực hiện nhiều nhất K lần đổi chỗ các ký tự trong S. Ví dụ K =3 và S = “1234567” ta được “7654321”.
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T.
+Những dòng kế tiếp đưa vào các bộ test. Mỗi bộ test gồm hai dòng: dòng thứ nhất là số K; dòng tiếp theo là xâu ký tự S.
+T, K, S thỏa mãn ràng buộc: 1≤T ≤100; 1≤K≤10; 1≤.lenght(S)≤7.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+
+Input
+3
+4
+1234567
+3
+3435335
+2
+1034
+
+Output
+7654321
+5543333
+4301
+ 
+
+Time limit: 2s
+Memory limit: 65536 Kb

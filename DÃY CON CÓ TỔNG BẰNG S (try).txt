@@ -1,0 +1,28 @@
+DÃY CON CÓ TỔNG BẰNG S
+
+Cho dãy số A[] có n phần tử và số nguyên dương S.
+Hãy tìm dãy con có ít phần tử nhất của A[] có tổng các phần tử đúng bằng S.
+
+Input
+Dòng đầu ghi hai số n và S. (n ≤ 30; S  ≤  10^9).
+Dòng thứ 2 ghi n số của dãy A[], các số đều nguyên dương và không quá 9 chữ số.
+
+Output
+Ghi ra độ dài của dãy con ngắn nhất có tổng bằng S.
+Nếu không có kết quả đúng thì ghi ra -1
+
+
+Ví dụ
+
+Input
+10 390
+200 10 20 20 50 50 50 50 100 100
+
+Output
+5
+
+
+Time limit: 2s
+Memory limit: 100000 Kb
+
+--------------------------------------------------------------------------------------------------------------

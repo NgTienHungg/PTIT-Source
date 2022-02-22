@@ -1,0 +1,34 @@
+DI CHUYỂN TRÁNH VẬT CẢN
+
+Cho một bảng kích thước N x N, trong đó có các ô trống ‘.’ và vật cản ‘X’.
+Các hàng và các cột được đánh số từ 0.
+Mỗi bước di chuyển, bạn có thể đi từ ô (x, y) tới ô (u, v) nếu như 2 ô này nằm trên cùng một hàng hoặc một cột, và không có vật cản nào ở giữa.
+Cho điểm xuất phát và điểm đích. Bạn hãy tính số bước di chuyển ít nhất?
+
+Input:
+Dòng đầu ghi số bộ test (không quá 10). Mỗi test gồm:
+Dòng đầu tiên là số nguyên dương N (1 ≤ N ≤ 100).
+N dòng tiếp theo, mỗi dòng gồm N kí tự mô tả bảng.
+Cuối cùng là 4 số nguyên a, b, c, d với (a, b) là tọa độ điểm xuất phát, (c, d) là tọa độ đích.
+Dữ liệu đảm bảo hai vị trí này không phải là ô có vật cản.
+ 
+Output: 
+Với mỗi test, in ra một số nguyên là đáp số của bài toán.
+ 
+
+Ví dụ:
+
+Input
+1
+3
+.X.
+.X.
+...
+0 0 0 2
+
+Output
+3
+
+
+Time limit: 2s
+Memory limit: 65536 Kb

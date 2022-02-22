@@ -1,0 +1,29 @@
+XÂU NHỊ PHÂN ĐỐI XỨNG ĐỘ DÀI CHẴN
+
+Cho số nguyên dương chẵn N. Hãy liệt kê tất cả các xâu nhị phân có độ dài chẵn, không vượt quá N và thỏa mãn tính chất đối xứng.
+
+Input
+Dòng đầu tiên đưa vào số lượng test T.
+Dòng tiếp theo đưa vào các bộ test. Mỗi bộ test được là một số N được viết trên một dòng.
+T, N thỏa mãn ràng buộc: 1≤T≤10; 1≤N≤30, N là số chẵn.
+
+Output
+Đưa ra kết quả mỗi test theo từng dòng.
+Các xâu cách nhau đúng một khoảng trống và được liệt kê theo thứ tự từ điển tăng dần.
+
+Ví dụ
+
+Input
+2
+2
+4
+
+Output
+00 11
+00 11 0000 0110 1001 1111
+
+
+Time limit: 2s
+Memory limit: 150000 Kb
+
+--------------------------------------------------------------------------------------------------------------

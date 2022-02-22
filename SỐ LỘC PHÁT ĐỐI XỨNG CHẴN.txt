@@ -1,0 +1,32 @@
+SỐ LỘC PHÁT ĐỐI XỨNG CHẴN
+
+Trong quan điểm người Việt, một số nguyên dương được gọi là “lộc phát” nếu chỉ có hai chữ số là 6 và/hoặc 8.
+Một số lộc phát X được gọi là đối xứng chẵn nếu:
+Số chữ số của X là chẵn
+X thỏa mãn tính chất đối xứng.
+Hãy liệt kê N số lộc phát đối xứng chẵn đầu tiên theo thứ tự từ nhỏ đến lớn.
+
+Input
+Dòng đầu tiên đưa vào số lượng test T.
+Dòng tiếp theo đưa vào các bộ test. Mỗi bộ test được là một số N được viết trên một dòng.
+T, N thỏa mãn ràng buộc: 1≤T≤100; 1≤N≤10^4.
+
+Output
+Đưa ra kết quả mỗi test theo từng dòng. Các số cách nhau đúng một khoảng trống.
+
+Ví dụ
+
+Input
+2
+4
+10
+
+Output
+66 88 6666 6886
+66 88 6666 6886 8668 8888 666666 668866 686686 688886
+
+
+Time limit: 2s
+Memory limit: 150000 Kb
+
+--------------------------------------------------------------------------------------------------------------

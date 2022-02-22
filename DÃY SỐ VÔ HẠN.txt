@@ -1,0 +1,64 @@
+DÃY SỐ VÔ HẠN
+
+Một dãy số tự nhiên bắt đầu bởi con số 1 và được thực hiện N-1 phép biến đổi “gấp đôi” dãy số như sau:
+Với dãy số A hiện tại, dãy số mới có dạng A, x, A trong đó x là số tự nhiên bé nhất chưa xuất hiện trong A.
+Ví dụ với 2 bước biến đổi, ta có [1] à [1 2 1] à [1 2 1 3 1 2 1]. Hãy xác định số thứ K trong dãy số cuối cùng là bao nhiêu?
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+Mỗi test gồm số nguyên dương N và K (1 ≤ N ≤ 50, 1 ≤ K ≤ 2N - 1).
+
+Output:
+Với mỗi test, in ra đáp án trên một dòng.
+
+
+Ví dụ:
+
+Input
+2
+3 2
+4 8
+
+Output
+2
+4
+
+Giải thích test 1: Dãy số thu được là [1, 2, 1, 3, 1, 2, 1].
+Giải thích test 2: Dãy số thu được là [1, 2, 1, 3, 1, 2, 1, 4, 1, 2, 1, 3, 1, 2, 1].
+
+
+Time limit: 1s
+Memory limit: 30000 Kb
+
+--------------------------------------------------------------------------------------------------------------
+
+Solution: Chia để trị
+
+Ví dụ dãy: [1, 2, 1, 3, 1, 2, 1]
+    index: [1, 2, 3, 4, 5, 6, 7]
+
+N <= 50 và K <= 2^N - 1, vậy nên không thể phân tích toàn bộ dãy này ra và lưu vào mảng được.
+Nhận thấy những số ở chính giữa một dãy con, luôn có một index đặc biệt là lũy thừa của 2
+
+Số 1 đầu tiên có index là 1 = 2^0
+Số 2 đầu tiên ở chính giữa dãy con [1, 2, 1] có index là 2 = 2^1
+Tương tự số 3 đầu tiên có index 4 = 2^2
+
+Vậy còn số 2 thứ 2 ở index = 6, index này thì nằm trong khoảng 2^2=4 đến 2^3=8,
+do vậy nó sẽ đối xứng với 1 số 2 trước nó qua tâm đối xứng là index 2^2=4, đó chính là số 2 ở index = 2
+
+Để đưa được số 2 ở index 6 này về index 2, ta chỉ cần trừ đi lũy thừa của 2 lớn nhất nhỏ hơn 6 (chính là 4),
+được 6 - 4 = 2.
+Mà 2 = 2^1 => Lấy mũ 1 này +1 thì ra được giá trị tại index 2^1 (chính bằng 2) theo quy luật ta đã nói ở đầu.
+
+Ví dụ có k = 7, việc cần làm bây giờ là đưa được 7 về dạng 1 lũy thừa của 2, lúc đó có thể tìm được giá trị tại index 7 thông qua giá trị tại index dạng lũy thừa 2 kia.
+Lũy thừa của 2 lớn nhất mà nhỏ hơn 7 là 2^2=4
+=> Tại index (7-4=3) cũng có giá trị bằng giá trị tại index 7, ta thay k = 3
+Lũy thừa của 2 lớn nhất mà nhỏ hơn 3 là 2^1=2
+=> Tại index (3-2=1) cũng có giá trị bằng giá trị tại index 3 (hay index 7), thay k = 1
+Tại k = 1, k đã có dạng 2^0 = 1
+=> Giá trị tại index 1 = Số mũ + 1 = 0 + 1 = 1 (Hay chính = giá trị tại index 3 và index 7)
+
+Vậy điều cần làm bây giờ là tìm ra các lũy thừa của 2 lưu vào 1 mảng cố định để dùng.
+Nếu k > Lũy thừa 2 tại i thì trừ k đi lũy thừa đó (Tìm index nhỏ hơn, đối xứng với k qua lũy thừa)
+Nếu k = Lũy thừa 2 tại i thì giá trị cần tìm là i + 1, dừng chương trình.

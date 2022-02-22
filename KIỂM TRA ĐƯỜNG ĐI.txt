@@ -1,0 +1,39 @@
+KIỂM TRA ĐƯỜNG ĐI
+
+Cho đồ thị vô hướng có N đỉnh và M cạnh.
+Có Q truy vấn, mỗi truy vấn yêu cầu trả lời câu hỏi giữa 2 đỉnh x và y có tồn tại đường đi tới nhau hay không?
+
+Input:
+Dòng đầu tiên là số lượng bộ test T (T ≤ 20).
+Mỗi test gồm 2 số nguyên N, M (1 ≤ N, M ≤ 1000).
+M dòng tiếp theo, mỗi dòng gồm 2 số nguyên u, v cho biết có cạnh nối giữa đỉnh u và v.
+Dòng tiếp là số lượng truy vấn Q (1 ≤ Q ≤ 1000).
+Q dòng tiếp theo, mỗi dòng gồm 2 số nguyên x và y.
+
+Output:
+Với mỗi truy vấn, in ra “YES” nếu có đường đi từ x tới y, in ra “NO” nếu ngược lại.
+
+
+Ví dụ:
+
+Input:
+1
+5 5
+1 2
+2 3
+3 4
+1 4
+5 6
+2
+1 5
+2 4
+
+Output
+NO
+YES
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
+
+--------------------------------------------------------------------------------------------------------------

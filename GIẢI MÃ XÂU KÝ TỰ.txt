@@ -1,0 +1,30 @@
+GIẢI MÃ XÂU KÝ TỰ
+
+Cho xâu ký tự mã hóa str. Hãy viết chương trình giải mã xâu ký tự str. Xâu ký tự mã hóa được thực hiện theo số lần lặp các xâu con của str như sau:
+Xâu đầu vào: “abbbababbbababbbab ”
+Xâu mã hóa : "3[a3[b]1[ab]]"
+
+Input:
+Dòng đầu tiên đưa vào số lượng bộ test T;
+Những dòng tiếp theo mỗi dòng đưa vào một bộ test. Mỗi bộ test là một xâu mã hóa str được viết trên một dòng.
+
+Output:
+Đưa ra kết quả mỗi test theo từng dòng.
+
+Ràng buộc:
+T, str thỏa mãn ràng buộc: 1≤T≤100; 1≤length(str)≤100.
+Ví dụ:
+
+
+Input
+2
+1[b]
+3[b2[ca]]
+
+Output
+b
+bcacabcacabcaca
+
+
+Time limit: 2s
+Memory limit: 65536 Kb
