@@ -1,3 +1,4 @@
+// https://code.ptit.edu.vn/student/question/DSA02045
 // TẬP CON CỦA XÂU KÝ TỰ
 
 #include <bits/stdc++.h>

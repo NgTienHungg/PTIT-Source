@@ -1,3 +1,4 @@
+// https://code.ptit.edu.vn/student/question/DSA02037
 // DÃY CON CÓ TỔNG NGUYÊN TỐ
 
 #include <bits/stdc++.h>
