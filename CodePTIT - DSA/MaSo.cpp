@@ -3,24 +3,31 @@ using namespace std;
 
 int n;
 string s;
-vector<string> word, num;
-vector<bool> vs; // dung de sinh word
+vector<string> nums;
+vector<string> words;
+bool vs[10] = {};
 
-void genNum(int i) {
-    for (int j = 0; j < n; ++j) {
-        s[i] = j + '1';
-        if (i == n - 1) num.push_back(s);
-        else genNum(i + 1);
+void TryNum(int i) {
+    for (int j = 1; j <= n; ++j) {
+        s[i] = j + '0';
+        if (i == n - 1) {
+            nums.push_back(s);
+        } else {
+            TryNum(i + 1);
+        }
     }
 }
 
-void genWord(int i) {
-    for (int j = 0; j < n; ++j) {
+void TryWord(int i) {
+    for (int j = 1; j <= n; ++j) {
         if (!vs[j]) {
             vs[j] = true;
-            s[i] = j + 'A';
-            if (i == n - 1) word.push_back(s);
-            else genWord(i + 1);
+            s[i] = (j - 1) + 'A';
+            if (i == n - 1) {
+                words.push_back(s);
+            } else {
+                TryWord(i + 1);
+            }
             vs[j] = false;
         }
     }
@@ -29,12 +36,11 @@ void genWord(int i) {
 void testCase() {
     cin >> n;
     s.resize(n);
-    vs.resize(n, false);
-    genNum(0);
-    genWord(0);
-    for (string i : word) {
-        for (string j : num) {
-            cout << i + j << endl;
+    TryNum(0);
+    TryWord(0);
+    for (string i : words) {
+        for (string j : nums) {
+            cout << i << j << endl;
         }
     }
 }
