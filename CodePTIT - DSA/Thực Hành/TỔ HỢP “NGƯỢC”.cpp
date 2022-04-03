@@ -3,25 +3,24 @@ using namespace std;
 
 int n, k;
 vector<int> a;
-vector<vector<int>> res;
+vector<vector<int>> b;
 
 void Try(int i) {
     for (int j = a[i - 1] + 1; j <= n - k + i; ++j) {
         a[i] = j;
-        if (i == k) res.push_back(a);
+        if (i == k) b.push_back(a);
         else Try(i + 1);
     }
 }
 
 void testCase() {
     cin >> n >> k;
-    res.clear();
-    a.resize(k + 1, 0);
+    a.assign(k + 1, 0);
+    b.clear();
     Try(1);
-    sort(res.rbegin(), res.rend());
-    for (auto i : res) {
-        for (int j = 1; j < i.size(); ++j) {
-            cout << i[j] << " ";
+    for (int i = b.size() - 1; i >= 0; --i) {
+        for (int j = 1; j < b[i].size(); ++j) {
+            cout << b[i][j] << " ";
         }
         cout << endl;
     }
