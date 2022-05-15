@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
+#define II pair<int, int>
 using namespace std;
 
 int a[1005][1005];
 int res[1005][1005];
 
-void testCase() {
+void TestCase() {
     int n, m;
     cin >> n >> m;
     for (int i = 0; i < n; ++i) {
@@ -13,36 +14,39 @@ void testCase() {
             res[i][j] = INT_MAX;
         }
     }
-    queue<pair<int, int>> q;
+    queue<II> q;
     q.push({0, 0});
     res[0][0] = 0;
     while (!q.empty()) {
-        int x = q.front().first;
-        int y = q.front().second;
+        int r = q.front().first;
+        int c = q.front().second;
         q.pop();
-        if (x == n - 1 && y == m - 1) {
-            cout << res[x][y];
+        if (r == n - 1 and c == m - 1) {
+            cout << res[r][c];
             return;
         }
         int i, j;
-        if (x + 1 < n) {
-            i = x + abs(a[x][y] - a[x + 1][y]), j = y;
-            if (i < n && res[i][j] == INT_MAX) {
-                res[i][j] = res[x][y] + 1;
+        if (r + 1 < n) {
+            i = r + abs(a[r][c] - a[r + 1][c]), j = c;
+            if (i < n and res[i][j] == INT_MAX) {
+                res[i][j] = res[r][c] + 1;
                 q.push({i, j});
             }
         }
-        if (y + 1 < m) {
-            i = x, j = y + abs(a[x][y] - a[x][y + 1]);
-            if (j < m && res[i][j] == INT_MAX) {
-                res[i][j] = res[x][y] + 1;
+        if (c + 1 < m) {
+            i = r, j = c + abs(a[r][c] - a[r][c + 1]);
+            if (j < m and res[i][j] == INT_MAX) {
+                res[i][j] = res[r][c] + 1;
                 q.push({i, j});
             }
         }
-        i = x + abs(a[x][y] - a[x + 1][y + 1]), j = y + abs(a[x][y] - a[x + 1][y + 1]);
-        if (i < n && j < m && res[i][j] == INT_MAX) {
-            res[i][j] = res[x][y] + 1;
-            q.push({i, j});
+        if (r + 1 < n and c + 1 < m) {
+            i = r + abs(a[r][c] - a[r + 1][c + 1]);
+            j = c + abs(a[r][c] - a[r + 1][c + 1]);
+            if (i < n and j < m and res[i][j] == INT_MAX) {
+                res[i][j] =  res[r][c] + 1;
+                q.push({i, j});
+            }
         }
     }
     cout << -1;
@@ -54,7 +58,7 @@ int main() {
 
     int T = 1; cin >> T;
     while (T--) {
-        testCase();
+        TestCase();
         cout << "\n";
     }
     return 0;
