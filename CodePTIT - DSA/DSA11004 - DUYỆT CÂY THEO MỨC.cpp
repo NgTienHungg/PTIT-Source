@@ -40,13 +40,22 @@ void Insert(Node *root, int n1, int n2, char c) {
 }
 
 void LevelOrder(Node *root) {
-C
+    queue<Node*> q;
+    q.push(root);
+    while (!q.empty()) {
+        Node *p = q.front();
+        q.pop();
+        cout << p->data << " ";
+        if (p->left != NULL)
+            q.push(p->left);
+        if (p->right != NULL)
+            q.push(p->right);
+    }
 }
 
 void TestCase() {
     int n; cin >> n;
     Node *root = NULL;
-    queue<Node*> q;
     while (n--) {
         int n1, n2;
         char c;
