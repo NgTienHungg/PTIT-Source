@@ -3,35 +3,34 @@ using namespace std;
 
 struct Node {
     int u, v;
-    int value;
+    int w;
 
-    Node(int u, int v, int value) {
+    Node(int u, int v, int w) {
         this->u = u;
         this->v = v;
-        this->value = value;
+        this->w = w;
     }
 };
 
 bool cmp(Node a, Node b) {
-    if (a.value == b.value) {
+    if (a.w == b.w) {
         if (a.u == b.u) {
             return a.v < b.v;
         }
         return a.u < b.u;
     }
-    return a.value < b.value;
+    return a.w < b.w;
 }
 
 void Kruskal(vector<Node> E, int n) {
     int dH = 0;
     vector<pair<int, int>> T;
     vector<bool> vs(n + 1, false);
-
-    sort(E.begin(), E.end(), cmp);
     
+    sort(E.begin(), E.end(), cmp);
     for (Node i : E) {
         if (!vs[i.u] or !vs[i.v]) {
-            dH += i.value;
+            dH += i.w;
             vs[i.u] = vs[i.v] = true;
             T.push_back({i.u, i.v});
         }
