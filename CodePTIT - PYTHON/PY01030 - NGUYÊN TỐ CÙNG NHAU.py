@@ -1,16 +1,11 @@
-def isValid(a, b):
-    while b != 0:
-        x = a % b
-        a = b
-        b = x
-    return a == 1
+import math
 
 
 n, k = [int(i) for i in input().split()]
-low, up = pow(10, k - 1), pow(10, k)
+low, up = 10**(k - 1), 10**k
 count = 0
 for i in range(low, up):
-    if isValid(n, i):
+    if math.gcd(n, i) == 1:
         print(i, end=' ')
         count += 1
         if count % 10 == 0:

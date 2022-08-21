@@ -1,42 +1,39 @@
 /* Author: NgTienHungg */
 package codeptit;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public class J01010 {
+public class J01010_CatDoi {
 
     public static Scanner ip = new Scanner(System.in);
 
-    public static void testCase() {
-        String s = ip.next();
-        ArrayList<Integer> res = new ArrayList<>();
+    public static long solve(String s) {
+        long n = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             switch (c) {
                 case '0':
                 case '8':
                 case '9':
-                    res.add(0);
+                    n = n * 10;
                     break;
                 case '1':
-                    res.add(1);
+                    n = n * 10 + 1;
                     break;
                 default:
-                    System.out.println("INVALID");
-                    return;
+                    return 0;
             }
         }
-        while (res.get(0) == 0) {
-            res.remove(0);
-        }
-        if (res.isEmpty()) {
+        return n;
+    }
+
+    public static void testCase() {
+        String s = ip.next();
+        long res = solve(s);
+        if (res == 0) {
             System.out.println("INVALID");
         } else {
-            for (int i : res) {
-                System.out.print(i);
-            }
-            System.out.println();
+            System.out.println(res);
         }
     }
 
