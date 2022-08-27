@@ -24,9 +24,3 @@ public class J03010_DiaChiEmail {
         }
     }
 }
-
-//4
-//    nGUYEn    quaNG   vInH  
-//   tRan   thi THU    huOnG
-//   nGO   quoC  VINH
-// lE            tuAn    aNH

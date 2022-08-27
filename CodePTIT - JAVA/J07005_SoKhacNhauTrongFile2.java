@@ -21,3 +21,5 @@ public class J07005_SoKhacNhauTrongFile2 {
         }
     }
 }
+
+// ?: dung ObjectInputStream + readObject() => IR

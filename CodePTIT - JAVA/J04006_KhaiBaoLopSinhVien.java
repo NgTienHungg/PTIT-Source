@@ -15,7 +15,7 @@ class Student {
     private float gpa;
 
     public Student() {
-       this("", "", "", 0f);
+        this("", "", "", 0f);
     }
 
     public Student(String name, String lop, String dob, float gpa) {
@@ -42,7 +42,7 @@ class Student {
     }
 }
 
-public class J04006_KhaiBaoLopThiSinh {
+public class J04006_KhaiBaoLopSinhVien {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
