@@ -15,4 +15,4 @@
 ## Note
 
 - Tìm kiếm: `Ctrl F` + `Mã bài` hoặc `Tên bài`
-- Tài liệu: [Document C++](https://drive.google.com/drive/folders/1HmSUWBoxB9nhNXb5Be7WTZRsowSs82hO?usp=sharing)
+- Tài liệu: [Document](https://drive.google.com/drive/folders/1HmSUWBoxB9nhNXb5Be7WTZRsowSs82hO?usp=sharing)
