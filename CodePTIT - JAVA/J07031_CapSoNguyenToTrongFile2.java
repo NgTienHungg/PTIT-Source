@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class J07030 {
+public class J07031_CapSoNguyenToTrongFile2 {
 
     public static boolean isPrime(int n) {
         for (int i = 2; i <= Math.sqrt(n); i++) {
@@ -22,25 +22,25 @@ public class J07030 {
     }
 
     public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("DATA1.in"));
-        List<Integer> a1 = (ArrayList<Integer>) ois.readObject();
-        List<Integer> a2 = (ArrayList<Integer>) ois.readObject();
+        ObjectInputStream ois1 = new ObjectInputStream(new FileInputStream("DATA1.in"));
+        List<Integer> a1 = (ArrayList<Integer>) ois1.readObject();
         Set<Integer> s1 = new TreeSet<>();
-        Set<Integer> s2 = new TreeSet<>();
         for (int i : a1) {
             if (isPrime(i)) {
                 s1.add(i);
             }
         }
-        for (int i : a2) {
-            if (isPrime(i)) {
-                s2.add(i);
-            }
-        }
-        
+
+        ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream("DATA2.in"));
+        List<Integer> a2 = (ArrayList<Integer>) ois2.readObject();
+
         final int SUM = 1000000;
         for (Integer i : s1) {
-            if (s2.contains(SUM - i)) {
+            Integer j = SUM - i;
+            if (i >= j) {
+                break;
+            }
+            if (s1.contains(j) && !a2.contains(i) && !a2.contains(j)) {
                 System.out.println(i + " " + (SUM - i));
             }
         }

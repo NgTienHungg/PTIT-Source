@@ -8,26 +8,23 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 class Customer implements Comparable<Customer> {
 
     public static int NUM_CUSTOMER = 1;
     private String id, name, roomId;
-    private Date startDay, lastDay;
-    private long duration;
+    private Long duration;
 
-    public Customer(String name, String roomId, String start, String last) throws ParseException {
+    public Customer(String name, String roomId, Long duration) {
         this.id = "KH" + String.format("%02d", NUM_CUSTOMER++);
         this.name = name;
         this.roomId = roomId;
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
-        this.startDay = sdf.parse(start);
-        this.lastDay = sdf.parse(last);
-        this.duration = (lastDay.getTime() - startDay.getTime()) / (1000 * 60 * 60 * 24);
+        this.duration = duration;
     }
 
-    public long getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
@@ -37,28 +34,27 @@ class Customer implements Comparable<Customer> {
     }
 
     @Override
-    public int compareTo(Customer o) {
-        return (int) (o.getDuration() - duration);
+    public int compareTo(Customer other) {
+        return -duration.compareTo(other.getDuration());
     }
 }
 
 public class J07046 {
 
     public static void main(String[] args) throws IOException, ParseException {
-        ArrayList<Customer> ds = new ArrayList<>();
         Scanner sc = new Scanner(new File("KHACK.in"));
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         int n = Integer.parseInt(sc.nextLine());
-        while (n-- > 0) {
+        List<Customer> ds = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
             String name = sc.nextLine();
             String roomId = sc.nextLine();
-            String start = sc.nextLine();
-            String last = sc.nextLine();
-            Customer cus = new Customer(name, roomId, start, last);
-            ds.add(cus);
+            Date startDay = sdf.parse(sc.nextLine());
+            Date lastDay = sdf.parse(sc.nextLine());
+            Long duration = (lastDay.getTime() - startDay.getTime()) / (1000L * 60 * 60 * 24); // convert second -> day
+            ds.add(new Customer(name, roomId, duration));
         }
         Collections.sort(ds);
-        for (Customer i : ds) {
-            System.out.println(i);
-        }
+        ds.forEach(System.out::println);
     }
 }

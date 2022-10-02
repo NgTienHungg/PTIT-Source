@@ -1,5 +1,5 @@
 /* Author: NgTienHungg */
-package codeptit;
+package practice;
 
 import java.util.Scanner;
 
@@ -37,7 +37,7 @@ class Rectangle {
     }
 }
 
-public class J04002_KhaiBaoLopHinhChuNhat {
+public class KhaiBaoLopHinhChuNhat {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
