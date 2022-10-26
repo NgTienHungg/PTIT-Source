@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -32,7 +31,7 @@ class Company implements Comparable<Company> {
     }
 }
 
-public class J07037_DanhSachDoanhNghiep{
+public class J07037_DanhSachDoanhNghiep {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner sc = new Scanner(new File("DN.in"));

@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.util.ArrayList;
 import java.util.Scanner;

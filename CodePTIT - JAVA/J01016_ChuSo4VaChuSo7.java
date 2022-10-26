@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.util.Arrays;
 import java.util.HashSet;

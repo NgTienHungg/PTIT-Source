@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,10 +38,10 @@ class Customer implements Comparable<Customer> {
     }
 }
 
-public class J07046 {
+public class J07046_DanhSachLuuTru {
 
     public static void main(String[] args) throws IOException, ParseException {
-        Scanner sc = new Scanner(new File("KHACK.in"));
+        Scanner sc = new Scanner(new File("KHACH.in"));
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         int n = Integer.parseInt(sc.nextLine());
         List<Customer> ds = new ArrayList<>();

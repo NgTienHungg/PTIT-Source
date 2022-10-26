@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,9 +18,7 @@ class Customer implements Comparable<Customer> {
 
     public Customer(String name, String roomId, Date checkInDate, Date checkOutDate, int serviceFee) {
         this.id = String.format("KH%02d", NUM_ID++);
-
         this.name = normalizeName(name);
-
         this.roomId = roomId;
         switch (roomId.substring(0, 1)) {
             case "1":
@@ -37,9 +34,7 @@ class Customer implements Comparable<Customer> {
                 price = 80;
                 break;
         }
-
         this.timeByDay = calculateTime(checkInDate, checkOutDate);
-
         this.totalCost = price * timeByDay + serviceFee;
     }
 
@@ -61,7 +56,7 @@ class Customer implements Comparable<Customer> {
         return (int) ((out - in) / (1000 * 60 * 60 * 24)) + 1;
     }
 
-    public int getTotalCost() {
+    public Integer getTotalCost() {
         return totalCost;
     }
 
@@ -72,34 +67,29 @@ class Customer implements Comparable<Customer> {
 
     @Override
     public int compareTo(Customer other) {
-        return -(totalCost - other.getTotalCost());
+        return -(this.getTotalCost().compareTo(other.getTotalCost()));
     }
 }
 
-public class J07051 {
+public class J07051_TinhTienPhong {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws FileNotFoundException, ParseException {
         Scanner sc = new Scanner(new File("KHACHHANG.in"));
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         int n = Integer.parseInt(sc.nextLine());
         List<Customer> customers = new ArrayList<>();
         while (n-- > 0) {
-            try {
-                String name = sc.nextLine();
-                String roomId = sc.nextLine();
-                Date checkInDate = sdf.parse(sc.nextLine());
-                Date checkOutDate = sdf.parse(sc.nextLine());
-                int serviceFee = Integer.parseInt(sc.nextLine());
-                Customer customer = new Customer(name, roomId, checkInDate, checkOutDate, serviceFee);
-                customers.add(customer);
-            } catch (ParseException ex) {
-                // do something
-            }
+            String name = sc.nextLine().trim();
+            String roomId = sc.nextLine().trim();
+            Date checkInDate = sdf.parse(sc.nextLine());
+            Date checkOutDate = sdf.parse(sc.nextLine());
+            int serviceFee = Integer.parseInt(sc.nextLine());
+            Customer customer = new Customer(name, roomId, checkInDate, checkOutDate, serviceFee);
+            customers.add(customer);
         }
 
         Collections.sort(customers);
-
         for (Customer customer : customers) {
             System.out.println(customer);
         }

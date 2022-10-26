@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.io.File;
 import java.io.FileNotFoundException;

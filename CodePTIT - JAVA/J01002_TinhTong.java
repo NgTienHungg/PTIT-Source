@@ -1,7 +1,5 @@
 /* Author: NgTienHungg */
 
-package codeptit;
-
 import java.util.Scanner;
 
 public class J01002_TinhTong {

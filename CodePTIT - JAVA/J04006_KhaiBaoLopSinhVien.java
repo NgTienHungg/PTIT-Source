@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

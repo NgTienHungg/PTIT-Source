@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;

@@ -1,5 +1,4 @@
 /* Author: NgTienHungg */
-package codeptit;
 
 public class CHELLO_HelloWorld {
 

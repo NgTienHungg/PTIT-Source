@@ -1,5 +1,5 @@
 /* Author: NgTienHungg */
-package codeptit;
+
 
 import java.util.Scanner;
 
