@@ -10,7 +10,7 @@ public class J03016_ChiaHetCho11 {
         int t = sc.nextInt();
         while (t-- > 0) {
             BigInteger bi = sc.nextBigInteger();
-            System.out.println(bi.mod(new BigInteger("11")).toString().equals("0") ? "1" : "");
+            System.out.println(bi.mod(new BigInteger("11")).toString().equals("0") ? "1" : "0");
         }
     }
 }
