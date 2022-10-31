@@ -44,7 +44,7 @@ public class J07058_DanhSachMonThi {
             String hinhThucThi = sc.nextLine();
             list.add(new Subject(maMon, tenMon, hinhThucThi));
         }
-        
+
         Collections.sort(list);
         for (Subject e : list) {
             System.out.println(e);

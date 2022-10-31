@@ -11,7 +11,7 @@ public class J02011_SapXepChon {
         for (int i = 0; i < n; i++) {
             a[i] = ip.nextInt();
         }
-        
+
         for (int i = 0; i < n - 1; i++) {
             int id = i; // vị trí phần tử có giá trị nhỏ nhất (trong đoạn sau chưa được sort)
             for (int j = i + 1; j < n; j++) {
@@ -19,11 +19,11 @@ public class J02011_SapXepChon {
                     id = j;
                 }
             }
-            
+
             int tmp = a[i];
             a[i] = a[id];
             a[id] = tmp;
-            
+
             System.out.printf("Buoc %d: ", i + 1);
             for (int j = 0; j < n; j++) {
                 System.out.print(a[j] + " ");

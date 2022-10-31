@@ -1,7 +1,7 @@
+/* Author: NgTienHungg */
 
 import java.util.Scanner;
 
-/* Author: NgTienHungg */
 class Candidate {
 
     public String ma, hoTen;

@@ -7,7 +7,7 @@ public class J02005_GiaoCuaHaiDaySo {
 
     public static void main(String[] args) {
         Scanner ip = new Scanner(System.in);
-        
+
         int n = ip.nextInt();
         int m = ip.nextInt();
         int[] a = new int[n];

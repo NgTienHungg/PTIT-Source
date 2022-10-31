@@ -10,7 +10,7 @@ public class J02007_DemSoLanXuatHien {
         int n = ip.nextInt();
         int[] a = new int[n];
         int[] dd = new int[100005];
-        
+
         for (int i = 0; i < n; i++) {
             a[i] = ip.nextInt();
             dd[a[i]]++;

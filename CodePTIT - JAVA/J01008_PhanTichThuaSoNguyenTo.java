@@ -1,6 +1,5 @@
 /* Author: NgTienHungg */
 
-
 import java.util.Scanner;
 
 public class J01008_PhanTichThuaSoNguyenTo {

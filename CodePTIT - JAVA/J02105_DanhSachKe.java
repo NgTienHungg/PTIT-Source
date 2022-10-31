@@ -12,7 +12,7 @@ public class J02105_DanhSachKe {
         for (int i = 0; i <= n; i++) {
             g[i] = new ArrayList<>();
         }
-        
+
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 byte x = ip.nextByte();

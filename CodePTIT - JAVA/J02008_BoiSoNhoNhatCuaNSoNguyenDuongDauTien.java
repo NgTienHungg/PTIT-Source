@@ -14,7 +14,7 @@ public class J02008_BoiSoNhoNhatCuaNSoNguyenDuongDauTien {
         }
         return a;
     }
-    
+
     public static long lcm(long a, long b) {
         return a * b / gcd(a, b);
     }

@@ -26,16 +26,16 @@ public class J07032 {
 
         ObjectInputStream ois1 = new ObjectInputStream(new FileInputStream("DATA1.in"));
         List<Integer> al1 = (ArrayList<Integer>) ois1.readObject();
-        
+
         ObjectInputStream ois2 = new ObjectInputStream(new FileInputStream("DATA2.in"));
         List<Integer> al2 = (ArrayList<Integer>) ois2.readObject();
-        
+
         for (Integer x : al1) {
             if (isValid(x.toString()) && al2.contains(x)) {
                 dd[x]++;
             }
         }
-        
+
         for (Integer x : al2) {
             if (isValid(x.toString()) && dd[x] != 0) {
                 dd[x]++;
