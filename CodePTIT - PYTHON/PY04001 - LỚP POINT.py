@@ -1,17 +1,17 @@
-import math
-from decimal import Decimal
+from math import sqrt
 
 
 class Point:
-    def __init(self, x, y):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
 
-    def distance(self, p):
-        dx = self.x - p.x
-        dy = self.y - p.y
-        d = math.sqrt(dx * dx + dy * dy)
-        return "{:.4f".format(d)
+    def distance(self, other):
+        return '{:.4f}'.format(sqrt((pow(self.x - other.x, 2) + pow(self.y - other.y, 2))))
+
+
+def Decimal(x):
+    return float(x)
 
 
 if __name__ == '__main__':
