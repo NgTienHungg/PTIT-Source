@@ -7,9 +7,14 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class J07032 {
+public class J07032_SoThuanNghichTrongFile {
 
     public static boolean isValid(String s) {
+        StringBuilder sb = new StringBuilder(s).reverse();
+        if (!sb.toString().equals(s)) {
+            return false;
+        }
+
         if (s.length() % 2 == 0 || s.length() == 1) {
             return false;
         }
